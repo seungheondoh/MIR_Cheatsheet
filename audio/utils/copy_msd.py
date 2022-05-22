@@ -3,11 +3,11 @@ import pickle
 import shutil
 import multiprocessing
 
-test_list = pickle.load(open(os.path.join("./media/bach2/seungheon/MSD_split/filtered_list_test.cP"), 'rb'))
-MSD_id_to_7D_id = pickle.load(open(os.path.join("./media/bach2/seungheon/MSD_split/MSD_id_to_7D_id.pkl"), 'rb'))
-id_to_path = pickle.load(open(os.path.join("./media/bach2/seungheon/MSD_split/7D_id_to_path.pkl"), 'rb'))
-msd_id_to_tag_vector = pickle.load(open(os.path.join("./media/bach2/seungheon/MSD_split/msd_id_to_tag_vector.cP"), 'rb'))
-audio_path = "./media/bach2/dataset/MSD/songs"
+test_list = pickle.load(open(os.path.join("./MSD_split/filtered_list_test.cP"), 'rb'))
+MSD_id_to_7D_id = pickle.load(open(os.path.join("./MSD_split/MSD_id_to_7D_id.pkl"), 'rb'))
+id_to_path = pickle.load(open(os.path.join("./MSD_split/7D_id_to_path.pkl"), 'rb'))
+msd_id_to_tag_vector = pickle.load(open(os.path.join("./MSD_split/msd_id_to_tag_vector.cP"), 'rb'))
+audio_path = "#"
 
 def _copy(msd_id):    
     source = os.path.join(audio_path,id_to_path[MSD_id_to_7D_id[msd_id]])
